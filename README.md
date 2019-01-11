@@ -4,55 +4,6 @@
 
 This is an Ansible demo which configures two Cumulus VX switches as Leafs, one VX switch as Access, and 4 servers. The goal of this demo is to understand the significance of the <b>bridge</b>, <b>vlan</b> and <b>interface</b> options.
 
-### IGNORE everything below this:
-
-### Network Diagram:
-
-![Network Diagram](https://github.com/cloudofyou/training-bridging/blob/master/documentation/training-bridging-overview.png)
-
-### Initializing the demo environment:
-
-First, make sure that the following is currently running on your machine:
-
-1. Vagrant > version 2.1.2
-
-    https://www.vagrantup.com/
-
-2. Virtualbox > version 5.2.16
-
-    https://www.virtualbox.org
-
-3. Copy the Git repo to your local machine:
-
-    ```git clone https://github.com/Cloudofyou/training-bridging```
-
-4. Change directories to the following
-
-    ```training-bridging```
-
-6. Run the following:
-
-    ```./start-vagrant-poc.sh```
-
-### Running the Ansible Playbook
-
-1. SSH into the oob-mgmt-server:
-
-    ```cd vx-simulation```   
-    ```vagrant ssh oob-mgmt-server```
-
-2. Copy the Git repo unto the oob-mgmt-server:
-
-    ```git clone https://github.com/cloudofyou/training-bridging```
-
-3. Change directories to the following
-
-    ```training-bridging/automation```
-
-    ```./provision.sh```
-
-
-
 ### Errata
 
 1. To shutdown the demo, run the following command from the vx-simulation directory:
