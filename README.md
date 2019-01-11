@@ -16,7 +16,7 @@ This is an Ansible demo which configures two Cumulus VX switches as Leafs, one V
 
 3. The following command was used to run the Topology Converter within the vx-simulation directory:
 
-    ```python2 topology_converter.py training-bridging -c```
+    ```python2 topology_converter.py training-stacking -c```
 
     After the above command is executed, the following configuration changes are necessary:
 
