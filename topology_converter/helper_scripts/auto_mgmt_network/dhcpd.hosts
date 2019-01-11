@@ -1,0 +1,38 @@
+# /etc/dhcp/dhcpd.hosts
+# Created by Topology-Converter v4.6.9
+#    Template Revision: v4.6.9
+#    https://github.com/cumulusnetworks/topology_converter
+#    using topology data from: ./training-stacking.dot
+
+group {
+
+  option domain-name-servers 192.168.200.254;
+  option domain-name "simulation";
+  #option routers 192.168.200.254;
+  option www-server 192.168.200.254;
+  option default-url = "http://192.168.200.254/onie-installer";
+
+
+host oob-mgmt-switch {hardware ethernet 44:38:39:00:00:1f; fixed-address 192.168.200.7; option host-name "oob-mgmt-switch"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+
+host cspine01 {hardware ethernet 44:38:39:00:00:22; fixed-address 192.168.200.101; option host-name "cspine01"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+
+host cspine02 {hardware ethernet 44:38:39:00:00:24; fixed-address 192.168.200.102; option host-name "cspine02"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+
+host cleaf04 {hardware ethernet 44:38:39:00:00:26; fixed-address 192.168.200.4; option host-name "cleaf04"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+
+host cleaf05 {hardware ethernet 44:38:39:00:00:28; fixed-address 192.168.200.5; option host-name "cleaf05"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+
+host cleaf06 {hardware ethernet 44:38:39:00:00:2a; fixed-address 192.168.200.6; option host-name "cleaf06"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+
+host cleaf01 {hardware ethernet 44:38:39:00:00:2c; fixed-address 192.168.200.1; option host-name "cleaf01"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+
+host cleaf02 {hardware ethernet 44:38:39:00:00:2e; fixed-address 192.168.200.2; option host-name "cleaf02"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+
+host cleaf03 {hardware ethernet 44:38:39:00:00:30; fixed-address 192.168.200.3; option host-name "cleaf03"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+
+host campus02 {hardware ethernet 44:38:39:00:00:32; fixed-address 192.168.200.202; option host-name "campus02"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+
+host campus01 {hardware ethernet 44:38:39:00:00:34; fixed-address 192.168.200.201; option host-name "campus01"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+}#End of static host group
+

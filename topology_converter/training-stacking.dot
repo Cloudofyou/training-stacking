@@ -1,0 +1,31 @@
+graph vx {
+ "cspine01" [function="spine" os="CumulusCommunity/cumulus-vx" version="3.5.3" memory="1024" config="./helper_scripts/extra_switch_config.sh" mgmt_ip="192.168.200.101"]
+ "cspine02" [function="spine" os="CumulusCommunity/cumulus-vx" version="3.5.3" memory="1024" config="./helper_scripts/extra_switch_config.sh" mgmt_ip="192.168.200.102"]
+ "cleaf01" [function="leaf" os="CumulusCommunity/cumulus-vx" version="3.5.3" memory="1024" config="./helper_scripts/extra_switch_config.sh" mgmt_ip="192.168.200.1"]
+ "cleaf02" [function="leaf" os="CumulusCommunity/cumulus-vx" version="3.5.3" memory="1024" config="./helper_scripts/extra_switch_config.sh" mgmt_ip="192.168.200.2"]
+ "cleaf03" [function="leaf" os="CumulusCommunity/cumulus-vx" version="3.5.3" memory="1024" config="./helper_scripts/extra_switch_config.sh" mgmt_ip="192.168.200.3"]
+ "cleaf04" [function="leaf" os="CumulusCommunity/cumulus-vx" version="3.5.3" memory="1024" config="./helper_scripts/extra_switch_config.sh" mgmt_ip="192.168.200.4"]
+ "cleaf05" [function="leaf" os="CumulusCommunity/cumulus-vx" version="3.5.3" memory="1024" config="./helper_scripts/extra_switch_config.sh" mgmt_ip="192.168.200.5"]
+ "cleaf06" [function="leaf" os="CumulusCommunity/cumulus-vx" version="3.5.3" memory="1024" config="./helper_scripts/extra_switch_config.sh" mgmt_ip="192.168.200.6"]
+ "campus01" [function="leaf" os="CumulusCommunity/cumulus-vx" version="3.5.3" memory="1024" config="./helper_scripts/extra_switch_config.sh" mgmt_ip="192.168.200.201"]
+ "campus02" [function="leaf" os="CumulusCommunity/cumulus-vx" version="3.5.3" memory="1024" config="./helper_scripts/extra_switch_config.sh" mgmt_ip="192.168.200.202"]
+
+ "cspine01":"swp1" -- "cleaf01":"swp31"
+ "cspine01":"swp2" -- "cleaf02":"swp31"
+ "cspine01":"swp3" -- "cleaf03":"swp31"
+ "cspine01":"swp4" -- "cleaf04":"swp31"
+ "cspine01":"swp5" -- "cleaf05":"swp31"
+ "cspine01":"swp6" -- "cleaf06":"swp31"
+
+ "cspine02":"swp1" -- "cleaf01":"swp32"
+ "cspine02":"swp2" -- "cleaf02":"swp32"
+ "cspine02":"swp3" -- "cleaf03":"swp32"
+ "cspine02":"swp4" -- "cleaf04":"swp32"
+ "cspine02":"swp5" -- "cleaf05":"swp32"
+ "cspine02":"swp6" -- "cleaf06":"swp32"
+
+ "cspine01":"swp7" -- "campus01":"swp1"
+ "cspine02":"swp7" -- "campus02":"swp1"
+
+ "campus01":"swp2" -- "campus02":"swp2"
+}

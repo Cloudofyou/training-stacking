@@ -1,0 +1,27 @@
+# Created by Topology-Converter v4.6.9
+#    Template Revision: v4.6.9
+
+
+127.0.0.1 localhost 
+127.0.1.1 oob-mgmt-server
+
+192.168.200.254 oob-mgmt-server
+
+
+192.168.200.7 oob-mgmt-switch
+192.168.200.101 cspine01
+192.168.200.102 cspine02
+192.168.200.4 cleaf04
+192.168.200.5 cleaf05
+192.168.200.6 cleaf06
+192.168.200.1 cleaf01
+192.168.200.2 cleaf02
+192.168.200.3 cleaf03
+192.168.200.202 campus02
+192.168.200.201 campus01
+
+
+# The following lines are desirable for IPv6 capable hosts
+::1     localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
